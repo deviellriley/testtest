@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #5865F2;
+  --background-color: #23272a;
+  --text-color: #fff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  flex-grow: 1; /* Allow the container to grow and take the available space */
+  padding-bottom: 60px; /* Add space for the footer */
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--primary-color);
+  flex-basis: calc(33.33% - 20px); /* Three cards in a row with some margin */
+  height: 150px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.card-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Push the footer to the bottom of the container */
+  padding: 10px 0; /* Add padding to the footer */
+  background-color: var(--background-color); /* Optional: Add background color to the footer */
+}
+
+.footer a {
+  margin: 0 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.donate-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  border-radius: 50%;
+  background-color: #23272a;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.donate-button:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.donate-icon {
+  width: 30px;
+  height: 30px;
+  display: block; /* Added this line to remove extra space below the image */
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+  .container {
+    margin: 10px;
+    padding-bottom: 90px; /* Increase padding to make space for the footer */
+  }
+
+  .card {
+    flex-basis: calc(50% - 20px); /* Two cards in a row with some margin */
+    max-width: calc(50% - 20px);
+  }
+
+  .donate-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .donate-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
