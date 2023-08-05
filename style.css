@@ -4,6 +4,7 @@
   --text-color: #fff;
 }
 
+
 html, body {
   height: 100%;
   margin: 0;
@@ -15,6 +16,23 @@ body {
   background-color: var(--background-color);
   justify-content: center; /* Center the entire content vertically */
   align-items: center; /* Center the entire content horizontally */
+}
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.main-container {
+  margin-top: 20px;
 }
 
 .container {
@@ -29,6 +47,32 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.wow {
+  background-image: url("head.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1 0 300px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex; /* Added this line */
+  align-items: center; /* Added this line */
+  justify-content: center; /* Added this line */
+  text-align: center; /* Changed from 'left' to 'center' */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.wow-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 10px;
+  color: var(--text-color);
 }
 
 .card {
@@ -140,7 +184,3 @@ a {
     height: 20px;
   }
 }
-
-
-
-
